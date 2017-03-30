@@ -4,6 +4,7 @@ import time
 from flask_sqlalchemy import SQLAlchemy
 import psycopg2
 
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 
 test_select = """select * from users;"""
 try:
